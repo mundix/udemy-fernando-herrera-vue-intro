@@ -1,5 +1,5 @@
 <template>
-  <h2>{{title || 'Counter'}}</h2>
+  <h2>{{customTitle}}</h2>
   <!-- <p>{{counter}} <sup>2</sup> = {{counter*counter}}</p> -->
   <!-- <p>{{counter}} <sup>2</sup> = {{getSquareValue()}}</p> -->
   <!-- A diferencia del metodo el computado no se ejecuta mas de una vez, no como getSquareCounter -->
@@ -39,6 +39,9 @@ export default {
     computed: {
         squareCounter() {
             return this.counter * this.counter
+        },
+        customTitle(){
+            return this.title || 'Counter'
         }
     }
 }
