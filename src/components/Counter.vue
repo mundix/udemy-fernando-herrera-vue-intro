@@ -1,11 +1,30 @@
 <template>
   <h2>Counter</h2>
-  <p>10</p>
+  <!-- <p>{{counter}} <sup>2</sup> = {{counter*counter}}</p> -->
+  <!-- <p>{{counter}} <sup>2</sup> = {{getSquareValue()}}</p> -->
+  <!-- A diferencia del metodo el computado no se ejecuta mas de una vez, no como getSquareCounter -->
+  <p>{{counter}} <sup>2</sup> = {{squareCounter}}</p>
 </template>
 
 <script>
 export default {
-    name:'Patito'
+    // name:'Patito',
+    data() {
+        return {
+            counter: 5
+        }
+    }, 
+    methods: {
+            getSquareValue() {
+                return this.counter * this.counter
+            }
+    },
+    //computed , es otro objeto como los metodos 
+    computed: {
+        squareCounter() {
+            return this.counter * this.counter
+        }
+    }
 }
 </script>
 
