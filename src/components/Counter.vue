@@ -5,8 +5,11 @@
   <!-- A diferencia del metodo el computado no se ejecuta mas de una vez, no como getSquareCounter -->
   <p>{{counter}} <sup>2</sup> = {{squareCounter}}</p>
   <div>
-      <button v-on:click="increateValue">+1</button>
-      <button v-on:click="decreaseValue">-1</button>
+      <!-- <button v-on:click="increateValue">+1</button> -->
+      <!-- <button v-on:click="decreaseValue">-1</button> -->
+      <!-- Esto es lo mismo que v-on:click el @click -->
+      <button @click="increateValue">+1</button>
+      <button @click="decreaseValue">-1</button>
     </div>
 </template>
 
