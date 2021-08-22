@@ -1,18 +1,22 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Counter/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// el @ hace la referencia a la carpeta src , para no tener que poenr los ../ y asi 
+// import HelloWorld from '@/components/HelloWorld.vue'
+import Counter from './components/Counter.vue'
 
 export default {
   name: 'App',
+  //los compoens que se vayan a usar , en el componetns obj 
   components: {
-    HelloWorld
+    Counter
   }
 }
 </script>
+
 
 <style>
 #app {
