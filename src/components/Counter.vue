@@ -1,5 +1,5 @@
 <template>
-  <h2>Counter</h2>
+  <h2>{{title || 'Counter'}}</h2>
   <!-- <p>{{counter}} <sup>2</sup> = {{counter*counter}}</p> -->
   <!-- <p>{{counter}} <sup>2</sup> = {{getSquareValue()}}</p> -->
   <!-- A diferencia del metodo el computado no se ejecuta mas de una vez, no como getSquareCounter -->
@@ -15,6 +15,9 @@
 
 <script>
 export default {
+    // Aqui van las props o se recomenida ponerlos aqqui
+    //si hacemos esto ya tenemos acceso al titulo
+    props: ['title'],
     // name:'Patito',
     data() {
         return {

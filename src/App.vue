@@ -1,6 +1,9 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <Counter/>
+  <!-- Enviando las props en los componentes el title es el props para el componetn-->
+  <Counter title='Entraron'/>
+  <!-- Hay varias forma de manipular estas variables  -->
+  <Counter />
 </template>
 
 <script>
