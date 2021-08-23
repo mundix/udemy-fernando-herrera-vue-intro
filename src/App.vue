@@ -3,8 +3,7 @@
   <!-- Enviando las props en los componentes el title es el props para el componetn-->
   <Counter title='Entraron'/>
   <!-- Hay varias forma de manipular estas variables  -->
-  <Counter />
-</template>
+</template>  
 
 <script>
 // el @ hace la referencia a la carpeta src , para no tener que poenr los ../ y asi 
