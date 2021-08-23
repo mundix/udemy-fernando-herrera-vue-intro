@@ -14,7 +14,7 @@
 <script>
 // el @ hace la referencia a la carpeta src , para no tener que poenr los ../ y asi 
 // import HelloWorld from '@/components/HelloWorld.vue'
-import Counter from './components/Counter.vue'
+// import Counter from './components/Counter.vue'
 import Indecision from './components/Indecision.vue'
 
 export default {
