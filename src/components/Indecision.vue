@@ -27,9 +27,11 @@ export default {
         async getAnswer(){
             this.answer = 'Pensando...'
 
-            const data = await fetch('https://yesno.wtf/api').then( r => r.json() )
+            // const data = await fetch('https://yesno.wtf/api').then( r => r.json() )
+            const {answer, image} = await fetch('https://yesno.wtf/api').then( r => r.json() )
 
-            console.log(data)
+            // console.log(answer)
+            this.answer = answer
 
         }
     },
