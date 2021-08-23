@@ -5,7 +5,7 @@
   <div class='indecision-container'>
       <input  v-model='question' type="text" placeholder="Hazme una pregunta">
       <p>Recuerda termina con un signo de interrogación (?)</p>
-      <div>
+      <div v-if='isValidQuestion'>
           <!-- <h2>Seré millonario</h2> -->
           <h2>{{question}}</h2>
           <h1>{{answer}}</h1>
@@ -20,7 +20,8 @@ export default {
             // question:'Hola Mundo'
             question: null,
             answer: null,
-            img: null
+            img: null,
+            isValidQuestion: false
         }
     },
     methods: {
@@ -28,8 +29,12 @@ export default {
         async getAnswer(){
             this.answer = 'Pensando...'
 
+
+            this.isValidQuestion = false
             // const data = await fetch('https://yesno.wtf/api').then( r => r.json() )
             const {answer, image} = await fetch('https://yesno.wtf/api').then( r => r.json() )
+
+            this.isValidQuestion = true
 
             // console.log(answer)
             this.answer = answer
