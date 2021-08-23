@@ -27,7 +27,11 @@ export default {
         start: {
             type: Number,
             // required: true
-            default: 100
+            default: 100,
+            // Validando 
+            validator(value) {
+                return value > 100
+            }
         }
     },
     // name:'Patito',
