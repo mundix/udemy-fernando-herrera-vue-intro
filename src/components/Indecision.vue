@@ -8,7 +8,7 @@
       <div>
           <!-- <h2>Seré millonario</h2> -->
           <h2>{{question}}</h2>
-          <h1>Si, No, ...</h1>
+          <h1>{{answer}}</h1>
       </div>
   </div>
 </template>
@@ -18,7 +18,19 @@ export default {
     data(){
         return {
             // question:'Hola Mundo'
-            question: null
+            question: null,
+            answer: null
+        }
+    },
+    methods: {
+        //lo pongo async asi tengo acceso al await
+        async getAnswer(){
+            this.answer = 'Pensando...'
+
+            const data = await fetch('https://yesno.wtf/api').then( r => r.json() )
+
+            console.log(data)
+
         }
     },
     // Debemos estar  pendiente cuando el usuario envia el "?"
@@ -30,6 +42,8 @@ export default {
             // Esto me evalu si value tiene un signo de "?"
             // console.log(value.includes('?'))
             if( !value.includes('?') ) return
+
+            this.getAnswer()
             // console.log('Got it')
             //realizar peticion HTTP
             // Tengo que reconocer cuando la persona pone el signo de  "?"
