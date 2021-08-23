@@ -1,9 +1,9 @@
 <template>
   <!-- <h1>Indecision</h1> -->
-  <img src="https://via.placeholder.com/250" alt="">
+  <img  v-if='img' :src="img" alt="bg">
   <div class="bg-dark"></div>
   <div class='indecision-container'>
-      <input v-model='question' type="text" placeholder="Hazme una pregunta">
+      <input  v-model='question' type="text" placeholder="Hazme una pregunta">
       <p>Recuerda termina con un signo de interrogación (?)</p>
       <div>
           <!-- <h2>Seré millonario</h2> -->
@@ -19,7 +19,8 @@ export default {
         return {
             // question:'Hola Mundo'
             question: null,
-            answer: null
+            answer: null,
+            img: null
         }
     },
     methods: {
@@ -32,6 +33,7 @@ export default {
 
             // console.log(answer)
             this.answer = answer
+            this.img = image
 
         }
     },
