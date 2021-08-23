@@ -37,7 +37,7 @@ export default {
             this.isValidQuestion = true
 
             // console.log(answer)
-            this.answer = answer
+            this.answer = answer === 'yes' ? 'Si' : 'No'
             this.img = image
 
         }
