@@ -1,7 +1,12 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <!-- Enviando las props en los componentes el title es el props para el componetn-->
-  <Counter title='Entraron'/>
+  <!-- Como hacemos par amandar un 15 como numero -->
+  <!-- <Counter title='Entraron' start='15'/> -->
+  <!-- Si le pongo :start con los 2 puntos -->
+  <!-- <Counter title='Entraron' :start='10'/> -->
+  <!-- No quiero que los usuarios le pongan valores,  y voy a definir valores por defecto -->
+  <Counter :start='1'/>
   <!-- Hay varias forma de manipular estas variables  -->
 </template>  
 

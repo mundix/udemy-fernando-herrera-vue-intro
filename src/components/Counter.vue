@@ -17,11 +17,24 @@
 export default {
     // Aqui van las props o se recomenida ponerlos aqqui
     //si hacemos esto ya tenemos acceso al titulo
-    props: ['title'],
+    // Si no defino start en props, se vuelve un attributo 
+    // props: ['title', 'start'],
+    //Vamos a cambiar las forma de hacer las props , ahora como un obj
+    props: {
+        //asi le podemos poner el tipo de datos
+        title: String,
+        // start: Number
+        start: {
+            type: Number,
+            // required: true
+            default: 100
+        }
+    },
     // name:'Patito',
     data() {
         return {
-            counter: 5
+            // counter: 5
+            counter: this.start || 0
         }
     }, 
     methods: {
@@ -29,6 +42,9 @@ export default {
                 return this.counter * this.counter
             },
             increateValue(){
+                // Esto incremente un valor numeroico
+                // this.counter++
+                // Esto concatena un valor string  
                 this.counter = this.counter + 1
             },
             decreaseValue(){
