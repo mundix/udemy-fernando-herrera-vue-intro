@@ -3,10 +3,11 @@
   <img src="https://via.placeholder.com/250" alt="">
   <div class="bg-dark"></div>
   <div class='indecision-container'>
-      <input type="text" placeholder="Hazme una pregunta">
+      <input v-model='question' type="text" placeholder="Hazme una pregunta">
       <p>Recuerda termina con un signo de interrogación (?)</p>
       <div>
-          <h2>Seré millonario</h2>
+          <!-- <h2>Seré millonario</h2> -->
+          <h2>{{question}}</h2>
           <h1>Si, No, ...</h1>
       </div>
   </div>
@@ -14,7 +15,27 @@
 
 <script>
 export default {
+    data(){
+        return {
+            // question:'Hola Mundo'
+            question: null
+        }
+    },
+    // Debemos estar  pendiente cuando el usuario envia el "?"
+        // Esto se hace con el 'watch' es unn objeto  que puede ver un oberver de muchas cosas
+    watch: {
+        question(value, oldValue) {
+            // Si le ponemos el { } a los valores , imprime el nombre de la variable y el valor
+            // console.log({value, oldValue})
+            // Esto me evalu si value tiene un signo de "?"
+            // console.log(value.includes('?'))
+            if( !value.includes('?') ) return
+            // console.log('Got it')
+            //realizar peticion HTTP
+            // Tengo que reconocer cuando la persona pone el signo de  "?"
 
+        }
+    }
 }
 </script>
 
