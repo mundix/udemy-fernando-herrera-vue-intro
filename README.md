@@ -1,5 +1,11 @@
 # 03-fundamentos
 
+
+<!-- Validaciones  -->
+### Validations Vue 
+See [Validations Vue] (https://v3.vuejs.org/guide/component-props.html#prop-validation)
+
+
 ## Project setup
 ```
 yarn install
