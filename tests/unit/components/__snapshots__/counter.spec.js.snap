@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter Component Debe hacer Match con el Snapshot 1`] = `
+<h2>Counter</h2><!-- <p>{{counter}} <sup>2</sup> = {{counter*counter}}</p> -->
+<!-- <p>{{counter}} <sup>2</sup> = {{getSquareValue()}}</p> -->
+<!-- A diferencia del metodo el computado no se ejecuta mas de una vez, no como getSquareCounter -->
+<p>100 <sup>2</sup> = 10000</p>
+<div>
+  <!-- <button v-on:click="increateValue">+1</button> -->
+  <!-- <button v-on:click="decreaseValue">-1</button> -->
+  <!-- Esto es lo mismo que v-on:click el @click --><button>+1</button><button>-1</button>
+</div>
+`;
